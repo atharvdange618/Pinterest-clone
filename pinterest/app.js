@@ -15,14 +15,14 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-app.user(expressSession({
+app.use(expressSession({
   resave: false,
   saveUninitialized: false,
   secret: "Deadpool kills the marvel universe"
-}))
+}));
 
 app.use(passport.initialize());
-app.user(passport.session());
+app.use(passport.session());
 passport.serializeUser(usersRouter.serializeUser());
 passport.deserializeUser(usersRouter.deserializeUser());
 
