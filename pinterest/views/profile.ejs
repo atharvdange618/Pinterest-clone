@@ -17,22 +17,35 @@
                 <img src="https://images.unsplash.com/photo-1621786040662-455f23dcb6ff?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTF8fGJlYXV0aWZ1bCUyMG1vZGVsfGVufDB8fDB8fHww"
                     alt="Profile Picture">
             </div>
-            <h2 class="name">username</h2>
-            <h3 class="username">@username</h3>
-            <p class="tagline">some tagline</p>
-            <p class="description">some description</p>
-            <a href="#" class="button">Account Settings</a>
+            <h2 class="name">
+                <%= user.fullname %>
+            </h2>
+            <h3 class="username">@<%= user.username %>
+            </h3>
+            <p class="tagline">Lorem ipsum dolor sit amet</p>
+            <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe.</p>
+            <a href="/feed" class="button">Feed</a>
+            <a href="/logout" class="button">Logout</a>
+            <br><br>
+            <form action="/upload" method="post" enctype="multipart/form-data">
+                <input type="text" name="filecaption" placeholder="Caption">
+                <input type="file" name="file">
+                <input type="submit" value="Upload">
+            </form>
         </div>
     </div>
 
-    <div class="container">
-        <div class="card" style="width: 18rem;">
-            <img src="https://images.unsplash.com/photo-1621784563286-84f7646ef221?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDZ8fHxlbnwwfHx8fHw%3D"
-                class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">My Pics</h5>
+    <div class="cards flex">
+        <% user.posts.forEach(function(post){ %>
+            <div class="card" style="width: 18rem;">
+                <img src="/images/uploads/<%= post.image %>" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h3 class="card-title">
+                        <%= post.imageText %>
+                    </h3>
+                </div>
             </div>
-        </div>
+            <% }) %>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"

@@ -1,193 +1,151 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
     <title>Feed</title>
     <link rel="stylesheet" href="/stylesheets/feed.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 </head>
 
 <body>
-    <div class="container">
-        <div class="box">
-            <a href="ttps://oriontralelblog.com/wp-content/uploads/2019/08/IMG_6310.jpg">
-                <img src="https://oriontravelblog.com/wp-content/uploads/2019/08/IMG_6310.jpg" alt="image"></a>
-            <div class="caption">Lorem ipsum </div>
+    <div class="menu">
+        <img draggable="false" class="logo" src="https://cdn1.iconfinder.com/data/icons/logotypes/32/pinterest-512.png">
+        <a class="home">Home</a>
+        <a>Explore</a>
+        <a>Create</a>
+        <input id="one" type="text" class="search-bar" placeholder="Search">
+        <button id="two" class="search-bar"></button>
+        <div class="icon-container">
+            <img tabindex="1" draggable="false" class="icon bell" src="https://i.hizliresim.com/rcvolcu.png">
+            <img tabindex="1" draggable="false" class="icon message" src="https://i.hizliresim.com/newumah.png">
+            <img tabindex="1" draggable="false" class="icon pp"
+                src="https://i.pinimg.com/564x/bd/94/ce/bd94ce28cf8aefb521bac31d547f6409.jpg">
+            <img tabindex="1" draggable="false" class="icon btn" src="https://i.hizliresim.com/g15mqud.png">
+
+            <!----FOCUS----->
+            <div tabindex="1" class="focus-bar bell-bar">No notifications</div>
+            <!-------------------->
+            <div tabindex="1" class="focus-bar message-bar">No messages</div>
+            <!-------------------->
+            <div tabindex="1" class="focus-bar pp-bar">
+                <img
+                    src="https://images.unsplash.com/photo-1621786040662-455f23dcb6ff?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTF8fGJlYXV0aWZ1bCUyMG1vZGVsfGVufDB8fDB8fHww"><a
+                    href="/profile">@
+                    <%= user.username %>
+                </a>
+            </div>
+            <!-------------------->
+            <div tabindex="1" class="focus-bar btn-bar">Coming</div>
+
         </div>
-
-        <div class="box">
-            <a href="https://orionstardesign.com/wp-content/uploads/2021/08/newStopCropped1.jpg">
-                <img src="http://orionstardesign.com/wp-content/uploads/2021/08/newStopCropped1.jpg" alt="image"></a>
-            <div class="caption">Lorem ipsum </div>
-        </div>
-
-
-        <div class="box">
-            <a href="https://sciencecalx.com/wp-content/uploads/2023/07/chemistry.png">
-                <img src="https://orionstardesign.com/wp-content/uploads/2021/08/newStopCropped1.jpg" alt="image"></a>
-            <div class="caption">Lorem ipsum </div>
-        </div>
-
-        <div class="box">
-            <a href="https://orionstardesign.com/wp-content/uploads/2023/08/003.jpg">
-                <img src="https://orionstardesign.com/wp-content/uploads/2023/08/003.jpg" alt="image"></a>
-            <div class="caption">Lorem ipsum </div>
-        </div>
-
-        <div class="box">
-            <a href="https://orionstardesign.com/wp-content/uploads/2023/08/002.jpg">
-                <img src="https://orionstardesign.com/wp-content/uploads/2023/08/002.jpg" alt="image"></a>
-            <div class="caption">Lorem ipsum </div>
-        </div>
-
-        <div class="box">
-            <a href="https://orionstardesign.com/wp-content/uploads/2023/08/001.jpg">
-                <img src="https://orionstardesign.com/wp-content/uploads/2023/08/001.jpg" alt="image"></a>
-            <div class="caption">Lorem ipsum </div>
-        </div>
-
-        <div class="box">
-            <a href="https://orionstardesign.com/wp-content/uploads/2023/08/006.jpg">
-                <img src="https://orionstardesign.com/wp-content/uploads/2023/08/006.jpg" alt="image"></a>
-            <div class="caption">Lorem ipsum </div>
-        </div>
-
-        <div class="box">
-            <a href="https://orionstardesign.com/wp-content/uploads/2023/08/007.jpg">
-                <img src="https://orionstardesign.com/wp-content/uploads/2023/08/007.jpg" alt="image"></a>
-            <div class="caption">Lorem ipsum </div>
-        </div>
-
-
-        <div class="box">
-            <a href="https://orionstardesign.com/wp-content/uploads/2023/08/008.jpg">
-                <img src="https://orionstardesign.com/wp-content/uploads/2023/08/008.jpg" alt="image"></a>
-            <div class="caption">Lorem ipsum </div>
-        </div>
-
-        <div class="box">
-            <a href="https://orionstardesign.com/wp-content/uploads/2023/08/009-scaled.jpg">
-                <img src="https://orionstardesign.com/wp-content/uploads/2023/08/009-scaled.jpg" alt="image"></a>
-            <div class="caption">Lorem ipsum </div>
-        </div>
-
-        <div class="box">
-            <a href="https://orionstardesign.com/wp-content/uploads/2023/08/010.jpg">
-                <img src="https://orionstardesign.com/wp-content/uploads/2023/08/010.jpg" alt="image"></a>
-            <div class="caption">Lorem ipsum </div>
-        </div>
-
-        <div class="box">
-            <a href="https://orionstardesign.com/wp-content/uploads/2023/08/011.jpg">
-                <img src="https://orionstardesign.com/wp-content/uploads/2023/08/011.jpg" alt="image"></a>
-            <div class="caption">Lorem ipsum </div>
-        </div>
-
-        <div class="box">
-            <a href="https://orionstardesign.com/wp-content/uploads/2023/08/012.jpg">
-                <img src="https://orionstardesign.com/wp-content/uploads/2023/08/012.jpg" alt="image"></a>
-            <div class="caption">Lorem ipsum </div>
-        </div>
-
-        <div class="box">
-            <a href="https://orionstardesign.com/wp-content/uploads/2023/08/013.jpg">
-                <img src="https://orionstardesign.com/wp-content/uploads/2023/08/013.jpg" alt="image"></a>
-            <div class="caption">Lorem ipsum </div>
-        </div>
-
-
-        <div class="box">
-            <a href="https://orionstardesign.com/wp-content/uploads/2023/08/014.jpg">
-                <img src="https://orionstardesign.com/wp-content/uploads/2023/08/014.jpg" alt="image"></a>
-            <div class="caption">Lorem ipsum </div>
-        </div>
-
-        <div class="box">
-            <a href="https://orionstardesign.com/wp-content/uploads/2023/08/015.jpg">
-                <img src="https://orionstardesign.com/wp-content/uploads/2023/08/015.jpg" alt="image"></a>
-            <div class="caption">Lorem ipsum </div>
-        </div>
-
-        <div class="box">
-            <a href="https://orionstardesign.com/wp-content/uploads/2023/08/016.jpg">
-                <img src="https://orionstardesign.com/wp-content/uploads/2023/08/016.jpg" alt="image"></a>
-            <div class="caption">Lorem ipsum </div>
-        </div>
-
-        <div class="box">
-            <a href="https://orionstardesign.com/wp-content/uploads/2023/08/021.jpg">
-                <img src="https://orionstardesign.com/wp-content/uploads/2023/08/021.jpg" alt="image"></a>
-            <div class="caption">Lorem ipsum </div>
-        </div>
-
-        <div class="box">
-            <a href="https://orionstardesign.com/wp-content/uploads/2023/08/018.jpg">
-                <img src="https://orionstardesign.com/wp-content/uploads/2023/08/018.jpg" alt="image"></a>
-            <div class="caption">Lorem ipsum </div>
-        </div>
-
-        <div class="box">
-            <a href="https://orionstardesign.com/wp-content/uploads/2023/08/019.jpg">
-                <img src="https://orionstardesign.com/wp-content/uploads/2023/08/019.jpg" alt="image"></a>
-            <div class="caption">Lorem ipsum </div>
-        </div>
-
-        <div class="box">
-            <a href="https://orionstardesign.com/wp-content/uploads/2023/08/020.jpg">
-                <img src="https://orionstardesign.com/wp-content/uploads/2023/08/020.jpg" alt="image"></a>
-            <div class="caption">Lorem ipsum </div>
-        </div>
-
-        <div class="box">
-            <a href="https://orionstardesign.com/wp-content/uploads/2023/08/022.jpg">
-                <img src="https://orionstardesign.com/wp-content/uploads/2023/08/022.jpg" alt="image"></a>
-            <div class="caption">Lorem ipsum </div>
-        </div>
-
-        <div class="box">
-            <a href="https://orionstardesign.com/wp-content/uploads/2023/08/023.jpg">
-                <img src="https://orionstardesign.com/wp-content/uploads/2023/08/023.jpg" alt="image"></a>
-            <div class="caption">Lorem ipsum </div>
-        </div>
-
-        <div class="box">
-            <a href="https://orionstardesign.com/wp-content/uploads/2023/08/024.jpg">
-                <img src="https://orionstardesign.com/wp-content/uploads/2023/08/024.jpg" alt="image"></a>
-            <div class="caption">Lorem ipsum </div>
-        </div>
-
-        <div class="box">
-            <a href="https://orionstardesign.com/wp-content/uploads/2023/08/025.jpg">
-                <img src="https://orionstardesign.com/wp-content/uploads/2023/08/025.jpg" alt="image"></a>
-            <div class="caption">Lorem ipsum </div>
-        </div>
-
-        <div class="box">
-            <a href="https://orionstardesign.com/wp-content/uploads/2023/08/026.jpg">
-                <img src="https://orionstardesign.com/wp-content/uploads/2023/08/026.jpg" alt="image"></a>
-            <div class="caption">Lorem ipsum </div>
-        </div>
-
-        <div class="box">
-            <a href="https://orionstardesign.com/wp-content/uploads/2023/08/027.jpg">
-                <img src="https://orionstardesign.com/wp-content/uploads/2023/08/027.jpg" alt="image"></a>
-            <div class="caption">Lorem ipsum </div>
-        </div>
-
-        <div class="box">
-            <a href="https://orionstardesign.com/wp-content/uploads/2023/08/028.jpg">
-                <img src="https://orionstardesign.com/wp-content/uploads/2023/08/028.jpg" alt="image"></a>
-            <div class="caption">Lorem ipsum </div>
-        </div>
-
-        <div class="box">
-            <a href="https://orionstardesign.com/wp-content/uploads/2023/08/029.jpg">
-                <img src="https://orionstardesign.com/wp-content/uploads/2023/08/029.jpg" alt="image"></a>
-            <div class="caption">Lorem ipsum </div>
-        </div>
-
     </div>
+    <!--------------------------->
+    <div class="responsive-search-bar">
+        <input type="text">
+        <p class="close">❌</p>
+    </div>
+    <!--------------------------->
+    <div class="container">
+        <div class="window">
+            <img class="foto" src="https://i.pinimg.com/736x/47/5e/ba/475eba57454015bfe214e8722e2422a1.jpg">
+            <p class="content">Follow me</p>
+            <img class="user" src="https://i.pinimg.com/236x/58/9c/8f/589c8ffa48aa58004b6221b60a15f05e.jpg">
+            <a class="username">bruhmomento</a>
+
+            <div class="hover-zone">
+                <div class="top-bar">
+                    <p>Profile ⌵</p>
+                    <a>Save</a>
+                </div>
+                <!-------------------->
+                <div class="bottom-bar">
+                    <a>↗ website.com</a>
+                    <div class="radius-ico">
+                        <img src="https://cdn3.iconfinder.com/data/icons/iconset-1-1/24/icon_set_outlinder-10-256.png">
+                        <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-more-256.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-------------------->
+        <div class="window">
+            <img class="foto" src="https://i.pinimg.com/236x/34/0c/43/340c4350e10d6fac215d2a1a28410f6a.jpg">
+            <p class="content">Like my pen</p>
+            <img class="user" src="https://i.pinimg.com/236x/95/9c/d3/959cd32eba7a0b6cecacfe086a6c1a47.jpg">
+            <a class="username">devrimos</a>
+
+            <div class="hover-zone">
+                <div class="top-bar">
+                    <p>Profile ⌵</p>
+                    <a>Save</a>
+                </div>
+                <!-------------------->
+                <div class="bottom-bar">
+                    <a>↗ website.com</a>
+                    <div class="radius-ico">
+                        <img draggable="false"
+                            src="https://cdn3.iconfinder.com/data/icons/iconset-1-1/24/icon_set_outlinder-10-256.png">
+                        <img draggable="false"
+                            src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-more-256.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-------------------->
+        <div class="window">
+            <img class="foto" src="https://i.pinimg.com/564x/cc/3a/4c/cc3a4c281e75b599b967e1bc8e6e3863.jpg">
+            <p class="content">Hover</p>
+            <img class="user" src="https://i.pinimg.com/236x/8b/2b/aa/8b2baa42f72980861f541a315446ec5f.jpg">
+            <a class="username">usamaladin</a>
+
+            <div class="hover-zone">
+                <div class="top-bar">
+                    <p>Profile ⌵</p>
+                    <a>Save</a>
+                </div>
+                <!-------------------->
+                <div class="bottom-bar">
+                    <a>↗ website.com</a>
+                    <div class="radius-ico">
+                        <img draggable="false"
+                            src="https://cdn3.iconfinder.com/data/icons/iconset-1-1/24/icon_set_outlinder-10-256.png">
+                        <img draggable="false"
+                            src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-more-256.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-------------------->
+        <div class="window">
+            <img class="foto" src="https://i.pinimg.com/236x/69/1b/17/691b1705fc94d871d2fc6207bf8c4fe8.jpg">
+            <p class="content">Yeeesss</p>
+            <img class="user" src="https://i.pinimg.com/236x/46/1d/f7/461df750a734b8c580246e6618c6919a.jpg">
+            <a class="username">anon</a>
+
+            <div class="hover-zone">
+                <div class="top-bar">
+                    <p>Profile ⌵</p>
+                    <a>Save</a>
+                </div>
+                <!-------------------->
+                <div class="bottom-bar">
+                    <a>↗ website.com</a>
+                    <div class="radius-ico">
+                        <img draggable="false"
+                            src="https://cdn3.iconfinder.com/data/icons/iconset-1-1/24/icon_set_outlinder-10-256.png">
+                        <img draggable="false"
+                            src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-more-256.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/javascripts/feed.js"></script>
 </body>
 
 </html>
